@@ -31,13 +31,15 @@ function apsides(pos, vel, GM)
     v = mag(vel)
 
     h = r*v # angular momentum per unit mass at periapsis and apoapsis
-    ϵ = (v^2 / 2) - (GM / r) # orbital energy per unit mass
+    ϵ = (v^2)/2 - GM/r # orbital energy per unit mass
 
-    # At apsides ϵr^2 + GMr - h^2 / 2 = 0
-    # Use the quadratic equation to solve for r
+    # Substituting v = h/r into ϵ = (v^2)/2 - GM/r yields
+    # ϵ = (h^2)/2r^2 - GM/r  
+    #  r ≠ 0.  Rearrange into a quadratic equation to solve for r
+    # ϵr^2 + GMr - (h^2)/2 = 0   
     a = ϵ
     b = GM
-    c = -(h^2) / 2
+    c = -(h^2)/2
 
 
     ((-b + √(b^2 - 4a*c)) / 2a),    ((-b - √(b^2 - 4a*c)) / 2a)
