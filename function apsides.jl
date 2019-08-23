@@ -23,9 +23,9 @@ function apsides(pos, vel, GM)
         for aᵢ in a;    ∑aᵢ² += aᵢ^2; end
         √∑aᵢ²
     end
-    # WARNING: length(vec) would return the number of dimensions, 
-    # as defined in computer terminology, in the array.
-    # A "3D vector" in physics terminology is a 1D vector with three items.
+    # WARNING: length(vec) would return the number of items in the array. 
+    # A "3D vector" in physics terminology can be reprsented a 1D vector 
+    # with three items in computer terminology.
     r = mag(pos)
     v = mag(vel)
 
