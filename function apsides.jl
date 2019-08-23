@@ -23,7 +23,7 @@ function apsides(pos, vel, GM)
         for aᵢ in a;    ∑aᵢ² += aᵢ^2; end
         √∑aᵢ²
     end
-
+    # WARNING: The length(vec) would return the number of elements
     r = mag(pos)
     v = mag(vel)
 
