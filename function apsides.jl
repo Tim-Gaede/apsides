@@ -1,4 +1,4 @@
-#-------------------------------------------------------------------------------
+#───────────────────────────────────────────────────────────────────────────────
 # Timothy Gaede 2019-08-23
 #
 # NOTE: GM (μ for short) of a celestial body is typically known with more
@@ -23,8 +23,9 @@ function apsides(pos, vel, GM)
         for aᵢ in a;    ∑aᵢ² += aᵢ^2; end
         √∑aᵢ²
     end
-    # WARNING: length(vec) would return the number of items in the array. 
-    # A "3D vector" in physics terminology can be represented as a 1D vector 
+
+    # WARNING: length(vec) would return the number of items in the array.
+    # A "3D vector" in physics terminology can be represented as a 1D vector
     # with three items in computer terminology.
     r = mag(pos)
     v = mag(vel)
@@ -41,7 +42,7 @@ function apsides(pos, vel, GM)
 
     ((-b + √(b^2 - 4a*c)) / 2a),    ((-b - √(b^2 - 4a*c)) / 2a)
 end
-#-------------------------------------------------------------------------------
+#───────────────────────────────────────────────────────────────────────────────
 
 
 
